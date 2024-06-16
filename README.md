@@ -71,7 +71,7 @@ Next follow these additional steps:
  1. Install openFPGALoader using [instructions in openFPGALoader documentation](https://trabucayre.github.io/openFPGALoader/guide/install.html). 
  2. Connect Pico-Dirty-Blaster to target with ribbon cable.
  3. Load dirtyJtag.uf2 from the firmware directory onto the Pico board.
- 4. Load SVF file with this command ```openFPGALoader -b boardname <example>.svf```
+ 4. Load SVF file with this command ```openFPGALoader -c dirtyJtag <example>.svf```
  5. Wait, and wait some more, this will take minutes, but it works.
 
 
