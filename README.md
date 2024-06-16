@@ -4,16 +4,16 @@ Files and documentation for Pico-Dirty-Blaster Workshop
 
 ## Instructions
 
- 1 Assemble Pico-Dirty-Blaster
-    a Solder adapter PCB to Raspberry Pi Pico board
-    b Solder 10pin shrouded header connector to adapter board
- 2 Connect Pico-Dirty-Blaster to target board with ribbon cable
- 3 Plug in power to target board
- 4 While pressing BOOTSEL button, plug in Raspberry Pi Pico board
- 5 Release the BOOTSEL button after connecting the USB cable
- 6 Drag-n-Drop chosen example pico UF2 file to the "RPI-RP2" drive that appears
- 7 Wait for the file to transfer and Pico board will disconnect and begin programming
- 8 If programming is successful, the RPI-RP2 drive will reapear and the image will load
+ 1. Assemble Pico-Dirty-Blaster
+    1. Solder adapter PCB to Raspberry Pi Pico board
+    2. Solder 10pin shrouded header connector to adapter board
+ 2. Connect Pico-Dirty-Blaster to target board with ribbon cable
+ 3. Plug in power to target board
+ 4. While pressing BOOTSEL button, plug in Raspberry Pi Pico board
+ 5. Release the BOOTSEL button after connecting the USB cable
+ 6. Drag-n-Drop chosen example pico UF2 file to the "RPI-RP2" drive that appears
+ 7. Wait for the file to transfer and Pico board will disconnect and begin programming
+ 8. If programming is successful, the RPI-RP2 drive will reapear and the image will load
 
 ## Example Files
 Example images are provided by target board in the "examples" folder.  Current example images are built from FuseSoC blinky with different output LED settings, and a SERV Servant RISC-V hello world example, also built with FuseSoC.
@@ -54,3 +54,24 @@ After the file transfer completes, the drive will disconnect and start programmi
 ### The RPI-RP2 drive will reapear and the image will load when programming is complete
 If programming is successful, the Pico board will jump back to the bootloader and the "RPI-RP2" drive will reappear.  The image will load and run on the target.
 If programming is not successful, the firmware will not jump to the bootloader.  It is recommended to connect a serial console to view the messages for help debuging the issues.
+
+## Extra Credit
+
+### Test the Servant Hello World Example
+
+Follow the instructions for loading an example image above to load "pico-servant-hello.uf2"
+Next follow these additional steps:
+ 1. Load dirtyJtag.uf2 from the firmware directory onto the Pico board.
+ 2. Connect 10M08 TX (J5 pin 7) to Pico RX (pin 17)
+ 3. Connect serial terminal to Pico DirtyJTAG (8n1, 57600 baud)
+ 4. Press SW1 to reset the 10M08 and watch for the message
+
+ ### Load SVF image using openFPGALoader
+
+ 1. Install openFPGALoader using [instructions in openFPGALoader documentation](https://trabucayre.github.io/openFPGALoader/guide/install.html). 
+ 2. Connect Pico-Dirty-Blaster to target with ribbon cable.
+ 3. Load dirtyJtag.uf2 from the firmware directory onto the Pico board.
+ 4. Load SVF file with this command ```openFPGALoader -b boardname <example>.svf```
+ 5. Wait, and wait some more, this will take minutes, but it works.
+
+
