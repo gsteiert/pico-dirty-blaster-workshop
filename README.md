@@ -18,6 +18,10 @@ Files and documentation for Pico-Dirty-Blaster Workshop
 ## Example Files
 Example images are provided by target board in the "examples" folder.  Current example images are built from FuseSoC blinky with different output LED settings, and a SERV Servant RISC-V hello world example, also built with FuseSoC.
 
+## Generating JBC UF2 Files
+ * [Generating uncompressed JBC files](https://github.com/gsteiert/pico-dirty-blaster-workshop/blob/main/generate-jbc.md)
+ * [Converting JBC to UF2](https://github.com/steieio/jbcuf2)
+
 ## Detailed Instructions
 
 ### Assembling Pico-Dirty-Blaster
