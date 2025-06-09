@@ -2,7 +2,11 @@
 Files and documentation for Pico-Dirty-Blaster Workshop
 ![MAX10 10M08 Evaluation Kit connected to Pico-Dirty-Blaster](./img/pico-dirty-blaster-connected.jpg)
 
-## Instructions
+## Overview
+
+In this workshop you will turn a Raspberry Pi Pico board into an FPGA programmer and practice multiple methods of loading an FPGA with open source tools.
+
+
 
  1. Assemble Pico-Dirty-Blaster
     1. Solder adapter PCB to Raspberry Pi Pico board
