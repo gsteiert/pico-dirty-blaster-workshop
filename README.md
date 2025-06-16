@@ -34,6 +34,7 @@ This module demonstrates MAX10 support built into openFPGALoader, including the 
 Example images are provided by target board in the "examples" folder.  Current example images are built from FuseSoC blinky with different output LED settings, and a SERV Servant RISC-V hello world example, also built with FuseSoC.
  * [LED to Bleive (FuseSoC Blinky)](https://github.com/fusesoc/blinky)
  * [Servant: FPGA Reference Platform](https://serv.readthedocs.io/en/latest/servant.html)
+ * [PicoRV32 on MAX10 with UFM](https://github.com/gsteiert/picomaxdev)
 
 ## Generating JBC UF2 Files
  * [Generating uncompressed JBC files](https://github.com/gsteiert/pico-dirty-blaster-workshop/blob/main/generate-jbc.md)

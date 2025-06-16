@@ -13,8 +13,10 @@ This module will demonstrate how to load an FPGA image using openFPGALoader with
 4. Open and connect serial terminal
 5. Load MAX10 FPGA image using openFPGALoader
 6. Update firmware in UFM using openFPGALoader
-7. Build new firmware for PicoRV32
-8. Load your new firmware into UFM with PicoRV32
+
+### Extra Credit
+
+Build and load new firmware for PicoRV32
 
 ## Detailed Instructions
 
@@ -57,16 +59,33 @@ Observe the LEDs and the serial terminal for activity, then load another differe
 openFPGALoader -c dirtyJtag --flash-sector UFM0 picomax_fw_alternate.bin
 ```
 
-### Build new firmware for PicoRV32
+## Extra Credit Instructions
+
+Build your own PicoRV32 image and load it into the board.
+
+### Install RISC-V Toolchain
 
 You will need a RISC-V toolchain to build the firmware.  If you do not have one already installed, the [PicoRV32 project has scripts and instructions for installing](https://github.com/YosysHQ/picorv32?tab=readme-ov-file#building-a-pure-rv32i-toolchain).
+
+### Clone picomaxdev project and build firmware
 
 Clone the [picomaxdev project](https://github.com/gsteiert/picomaxdev), then, from the firmware directory build the firmware with this command:
 ```
 make max10m08evk_fw.bin
 ```
-Modify the code and build again.  
+Check that the image builds successfuly to confirm the tools and project are installed corrrectly.
+
+### Modify code and build again
+
+Change the splash screen or LED paterns in the code and build again.  
+```
+make max10m08evk_fw.bin
+```
 
 ### Load your new firmware into UFM with PicoRV32
+
 Use openFPGALoader as before to load the firmware you modified, and observe the behavior.
+```
+openFPGALoader -c dirtyJtag --flash-sector UFM0 max10m08evk_fw.bin
+```
 
