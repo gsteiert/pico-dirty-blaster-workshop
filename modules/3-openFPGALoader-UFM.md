@@ -31,6 +31,7 @@ Hold the BOOTSEL button while plugging in the Raspberry Pi Pico board to activat
 ### Connect pico adapter to MAX10 EVK
 
 Connect the 10 pin ribbon cable from the Pico Dirty Blaster to the JTAG Header on the MAX10 EVK (J10).  Connect the UART signals with the leads provided:  10M08 TX (J5 pin 7) to Pico RX (pin 17/GP13) and 10M08 RX (J5 pin 8) to Pico TX (pin 16/GP12).
+![Pico-Dirty-Blaster connected to MAX10 10M08 EVK with UART](../img/pico-dirty-blaster-uart.jpg)
 
 ### Open and connect serial terminal
 
