@@ -53,11 +53,11 @@ Observe the LEDs and the serial terminal for activity.
 
 Load modified firmware into UFM using openFPGALoader:
 ```
-openFPGALoader -c dirtyJtag --flash-sector UFM0 picomax_fw_update.bin
+openFPGALoader -c dirtyJtag picomax_fw_update.bin
 ```
 Observe the LEDs and the serial terminal for activity, then load another different image:
 ```
-openFPGALoader -c dirtyJtag --flash-sector UFM0 picomax_fw_alternate.bin
+openFPGALoader -c dirtyJtag --flash-sector UFM1 picomax_fw_alternate.bin
 ```
 
 ## Extra Credit Instructions
